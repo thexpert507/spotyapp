@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-12">
+        <input #artista (keyup)="buscar(artista.value); loading = true" type="text" placeholder="Buscar artista..." class="w-100">
+    </div>
+</div>
+
+<app-loading *ngIf="loading"></app-loading>
+
+<app-tarjeta [nuevasCanciones]="artistas"></app-tarjeta>
